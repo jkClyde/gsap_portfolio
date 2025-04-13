@@ -2,8 +2,8 @@ import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import Main from "@/components/main";
 import Navbar from "@/components/navbar";
-import { ParticleCanvas } from "@/hooks/particle";
 import ZoomParralax from "@/components/ZoomParralax";
+import Skills from "@/components/skills";
 
 
 export default function Home() {
@@ -15,6 +15,7 @@ export default function Home() {
       
       <ZoomParralax/>
       <Main/>
+      <Skills/>
       <Footer/>
       
     </div>
