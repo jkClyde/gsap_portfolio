@@ -1,0 +1,76 @@
+
+'use client';
+import { ParticleCanvas } from "@/hooks/particle";
+import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
+
+
+export default function Hero() {
+    const {scrollY} = useScroll();
+    const y   =useTransform(scrollY, [0, 500], [0, 100]);
+    return (
+        <section className="min-h-screen relative overflow-hidden  items-center flex">
+                            
+            <div className="max-w-7xl mx-auto px-[15px]   pt-[100px]">
+                <div className="flex flex-col lg:flex-row items-center justify-center gap-16  ">
+                    {/* Text content */}
+                    <motion.div
+                        initial={{ opacity: 0, y: -1000 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, ease: 'easeOut' }}
+                        className="relative group lg:w-1/2"
+                    >
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.5 }}
+                            className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent mb-6 text-center">
+                            Full Stack
+                            <br />
+                            <motion.span
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.8 }}
+                                className="bg-gradient-to-r from-primary via-secondary
+        to-tertiary bg-clip-text text-transparent"
+                            >
+                                Developer
+                            </motion.span>
+
+                        </motion.h1>
+
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 1.1 }}
+                            className="text-xl text-content/80 mb-8 text-center" 
+                        >
+
+                            Speciliazing in React, Node.js, and Cloud Architecture.
+                            Building scalable application with modern tech stacks.
+
+                        </motion.p>
+
+                        
+                            <motion.button 
+                               initial={{ opacity: 0, y: 20 }}
+                               animate={{ opacity: 1, y: 0 }}
+                               transition={{ duration: 0.8, delay: 1.2 }}
+                            className="flex justify-center gap-2 items-center 
+                                     bg-surface border-white/10
+                                        before:absolute before:w-full before:transition-all
+                                        before:duration-700 before:hover:w-full before:-left-full 
+                                        before:hover:left-0 before:rounded-full before:bg-gradient-to-r from-primary/10 to-tertiary/10
+                                        before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700
+                                        relative z-10 px-8 py-4 overflow-hidden border-2 rounded-full group mx-auto"
+                            >
+                            <span>
+                            Explore Work
+                            </span>
+                            </motion.button>
+                    </motion.div>
+                </div>
+            </div>
+        </section>
+    );
+}
