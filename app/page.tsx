@@ -1,9 +1,10 @@
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
-import Main from "@/components/main";
+
 import Navbar from "@/components/navbar";
 import ZoomParralax from "@/components/ZoomParralax";
 import Skills from "@/components/skills";
+import HorinzotalScroller from "@/components/horinzotalScroller";
 
 
 export default function Home() {
@@ -12,11 +13,11 @@ export default function Home() {
       
       <Navbar/>
       <Hero/>
-      
       <ZoomParralax/>
-      <Main/>
       <Skills/>
+      <HorinzotalScroller/>
       <Footer/>
+    
       
     </div>
   );

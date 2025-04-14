@@ -3,57 +3,51 @@ import { motion } from "framer-motion";
 import { 
   FaNode, 
   FaReact, 
-  FaAws, 
-  FaDocker, 
-  FaFigma, 
-  FaGitAlt
+  FaWordpress,
+  FaCss3Alt ,
+  FaPhp 
 } from "react-icons/fa";
 import { 
   SiJavascript, 
-  SiTypescript, 
   SiNextdotjs, 
   SiTailwindcss, 
   SiMongodb, 
-  SiPostgresql, 
-  SiRedux, 
-  SiFirebase, 
-  SiGraphql, 
-  SiPython
+  SiWebflow,
 } from "react-icons/si";
 
-// Skill categories with their respective skills
+
+
 const skillCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "React", icon: FaReact, color: "#61DAFB", level: 90 },
-      { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 85 },
-      { name: "TypeScript", icon: SiTypescript, color: "#3178C6", level: 80 },
-      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", level: 95 },
-      { name: "Redux", icon: SiRedux, color: "#764ABC", level: 75 },
-      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", level: 90 },
-      { name: "Figma", icon: FaFigma, color: "#F24E1E", level: 70 }
+      { name: "React", icon: FaReact, color: "#61DAFB", level: 85 },
+      { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 90 },
+      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", level: 85 },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", level: 95 },
+      { name: "CSS", icon: FaCss3Alt, color: "#1572B6", level: 95 }
+
     ]
   },
   {
     title: "Backend",
     skills: [
-      { name: "Node.js", icon: FaNode, color: "#339933", level: 85 },
-      { name: "GraphQL", icon: SiGraphql, color: "#E535AB", level: 75 },
-      { name: "Python", icon: SiPython, color: "#3776AB", level: 70 },
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248", level: 80 },
-      { name: "PostgreSQL", icon: SiPostgresql, color: "#336791", level: 75 }
+      { name: "Node.js", icon: FaNode, color: "#339933", level: 70 },
+      { name: "MongoDB", icon: SiMongodb, color: "#47A248", level: 70 },
+      { name: "PHP", icon: FaPhp, color: "#777BB4", level: 75 }
+
     ]
   },
   {
-    title: "DevOps & Tools",
+    title: "CMS & Website Builders",
     skills: [
-      { name: "Docker", icon: FaDocker, color: "#2496ED", level: 70 },
-      { name: "AWS", icon: FaAws, color: "#FF9900", level: 65 },
-      { name: "Git", icon: FaGitAlt, color: "#F05032", level: 90 },
-      { name: "Firebase", icon: SiFirebase, color: "#FFCA28", level: 80 }
+      { name: "WordPress", icon: FaWordpress, color: "#21759B", level: 95 },
+      { name: "Webflow", icon: SiWebflow, color: "#4353FF", level: 75 },
+      { name: "GoHighLevel", icon: SiWebflow, color: "#FF5722", level: 80 }
     ]
-  }
+  },
+  
+ 
 ];
 
 export default function Skills() {
@@ -61,6 +55,7 @@ export default function Skills() {
     <section className="py-32 relative" id="skills">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
+       
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -120,7 +115,7 @@ export default function Skills() {
         </div>
 
         {/* Call-to-action */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
@@ -135,8 +130,8 @@ export default function Skills() {
             </span>
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/10 to-tertiary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
           </button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
-}
+}   

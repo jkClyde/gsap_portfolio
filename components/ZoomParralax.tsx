@@ -1,6 +1,8 @@
 'use client'
 import { useRef } from "react"
 import Image from "next/image"
+import { ParticleCanvas } from "@/hooks/particle"
+
 import picture1 from "../public/images/image.png"
 import picture2 from "../public/images/image1.png"
 import picture3 from "../public/images/image2.png"
@@ -34,12 +36,15 @@ const ZoomParralax = () => {
 
   return (
     <div ref={container} className="h-[300vh] top-0 relative ">
+        {/* <ParticleCanvas/> */}
         <div className="sticky top-0 h-[100vh] overflow-hidden ">
+
    
             <motion.div 
             style={{scale:scale4}} 
             className="el w-full h-full absolute top-0 flex justify-center items-center"
             >
+                
             <div 
                 className="contentContainer w-[25vw] h-[25vh] relative overflow-auto rounded shadow flex flex-col justify-center"
                 style={{
@@ -48,11 +53,55 @@ const ZoomParralax = () => {
                 backgroundPosition: 'center'
                 }}
             >
+
+                    {/* Gradient fade overlay at the bottom */}
+            <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-background to-transparent w-full pointer-events-none z-10"></div>
                 <div className=" p-4 bg-black bg-opacity-70 h-full w-full flex justify-center items-center flex-col">
-                <motion.h3  
-                    className="text-[25px] font-bold mb-2 text-white">
-                    About Me
-                </motion.h3>
+                <motion.div 
+      className="flex flex-col items-center mt-6 mb-8"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.5, duration: 0.8 }}
+    >
+      <p className="text-white text-sm mb-2 opacity-80">Scroll Down</p>
+      
+      {/* Mouse outline */}
+      <motion.div 
+        className="relative w-5 h-8 border-2 border-white rounded-full flex items-center justify-center"
+      >
+        {/* Scrolling dot animation */}
+        <motion.div
+          className="w-1 h-1 bg-white rounded-full"
+          animate={{
+            y: [0, 10, 0],
+            opacity: [1, 0.5, 1]
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </motion.div>
+      
+      {/* Arrow below mouse */}
+      <motion.div 
+        className="mt-2"
+        animate={{
+          y: [0, 3, 0]
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0.2
+        }}
+      >
+        <svg width="16" height="8" viewBox="0 0 16 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L8 7L15 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </motion.div>
+    </motion.div>
                 
                 </div>
             </div>

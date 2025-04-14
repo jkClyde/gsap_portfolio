@@ -2,7 +2,7 @@
 'use client';
 import { ParticleCanvas } from "@/hooks/particle";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+
 
 
 export default function Hero() {
@@ -10,8 +10,11 @@ export default function Hero() {
     const y   =useTransform(scrollY, [0, 500], [0, 100]);
     return (
         <section className="min-h-screen relative overflow-hidden  items-center flex">
-                            
+            {/* Gradient fade overlay at the bottom */}
+            <div className="absolute bottom-0 left-0 right-0 h-36 bg-gradient-to-t from-background to-transparent w-full pointer-events-none z-10"></div>
+                     
             <div className="max-w-7xl mx-auto px-[15px]   pt-[100px]">
+            <ParticleCanvas/>    
                 <div className="flex flex-col lg:flex-row items-center justify-center gap-16  ">
                     {/* Text content */}
                     <motion.div
@@ -25,7 +28,7 @@ export default function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.5 }}
                             className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-primary via-secondary to-tertiary bg-clip-text text-transparent mb-6 text-center">
-                            Full Stack
+                            Web
                             <br />
                             <motion.span
                                 initial={{ opacity: 0, y: 20 }}
@@ -46,8 +49,9 @@ export default function Hero() {
                             className="text-xl text-content/80 mb-8 text-center" 
                         >
 
-                            Speciliazing in React, Node.js, and Cloud Architecture.
-                            Building scalable application with modern tech stacks.
+                       
+                            I focus on creating modern, responsive websites and web applications
+                             that deliver seamless user experiences.
 
                         </motion.p>
 
