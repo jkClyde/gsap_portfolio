@@ -1,7 +1,6 @@
 'use client'
 import { useRef } from "react"
 import Image from "next/image"
-import { ParticleCanvas } from "@/hooks/particle"
 
 import picture1 from "../public/images/image.png"
 import picture2 from "../public/images/image1.png"

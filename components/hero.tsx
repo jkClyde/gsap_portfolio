@@ -1,13 +1,13 @@
 
 'use client';
 import { ParticleCanvas } from "@/hooks/particle";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 
 
 
 export default function Hero() {
     const {scrollY} = useScroll();
-    const y   =useTransform(scrollY, [0, 500], [0, 100]);
+    // const y   =useTransform(scrollY, [0, 500], [0, 100]);
     return (
         <section className="min-h-screen relative overflow-hidden  items-center flex">
             {/* Gradient fade overlay at the bottom */}
