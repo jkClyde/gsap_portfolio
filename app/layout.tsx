@@ -11,8 +11,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Jhon Portfolio",
-  description: "Created by Jhon Smith",
+  title: "Clyde Portfolio",
+  description: "Clyde Portfolio",
 };
 
 export default function RootLayout({
