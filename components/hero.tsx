@@ -3,9 +3,27 @@
 import { ParticleCanvas } from "@/hooks/particle";
 import { motion, useScroll } from "framer-motion";
 
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
 
 
 export default function Hero() {
+
+     useGSAP(() => {
+        const words = gsap.utils.toArray("#header-hero span");
+
+        gsap.from(words, {
+        y: 40,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.4,
+        ease: "power3.out",
+        });
+    }, []);
+
+    const headingText = "Meet your next creative developer.";
+    
     const {scrollY} = useScroll();
     // const y   =useTransform(scrollY, [0, 500], [0, 100]);
     return (
@@ -17,10 +35,7 @@ export default function Hero() {
             <ParticleCanvas/>    
                 <div className="flex flex-col lg:flex-row items-center justify-center gap-16  ">
                     {/* Text content */}
-                    <motion.div
-                        initial={{ opacity: 0, y: -1000 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, ease: 'easeOut' }}
+                    <div
                         className="relative group lg:w-1/2"
                     >
                         <motion.h1
@@ -72,7 +87,7 @@ export default function Hero() {
                             Explore Work
                             </span>
                             </motion.button>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

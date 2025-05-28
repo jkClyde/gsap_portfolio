@@ -76,7 +76,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-surface border border-white/10 rounded-3xl p-8 hover:border-primary/30 transition-all"
+              className="bg-surface border border-white/10  p-8 hover:border-primary/30 transition-all"
             >
               <h3 className="text-2xl font-bold text-content mb-6 relative">
                 {category.title}

@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import ZoomParralax from "@/components/ZoomParralax";
 import Skills from "@/components/skills";
 import HorinzotalScroller from "@/components/horinzotalScroller";
+import About from "@/components/about";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar/>
       <Hero/>
       <ZoomParralax/>
+      <About/>
       <Skills/>
       <HorinzotalScroller/>
       <Footer/>
