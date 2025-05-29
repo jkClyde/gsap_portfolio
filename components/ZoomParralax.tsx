@@ -45,7 +45,7 @@ const ZoomParralax = () => {
             >
                 
             <div 
-                className="contentContainer md:w-[25vw] h-[25vh] relative overflow-auto rounded shadow flex flex-col justify-center"
+                className="contentContainer md:w-[25vw] h-[20vh] md:h-[25vh] relative overflow-auto rounded shadow flex flex-col justify-center"
                 style={{
                 backgroundImage: `url(${picture1.src})`,
                 backgroundSize: 'cover',
@@ -107,7 +107,7 @@ const ZoomParralax = () => {
 
             {/* React */}
             <motion.div style={{scale:scale5}} className="el w-full h-full absolute top-0 flex justify-center items-center ">
-            <div  className="imageContainer w-[35vw] h-[25vh] md:h-[30vh] relative -top-[27svh] md:-top-[31vh] left-[5vw]">
+            <div  className="imageContainer w-[35vw] h-[25vh] md:h-[30vh] relative -top-[28vh] md:-top-[31vh] left-[5vw]">
                     <Image
                         src={picture2}
                         fill
