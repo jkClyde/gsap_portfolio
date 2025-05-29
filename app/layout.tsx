@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import Hero from "@/components/hero";
 
 import "./globals.css";
 import { Poppins } from "next/font/google";
@@ -21,13 +24,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="min-h-screen bg-[#0A0A0A]]">
+       
       <body
         suppressHydrationWarning
         className={`${poppins.variable} font-poppins antialiased`}
       >
+        <Navbar/>
+        <Hero/>
 
         {children}
+               <Footer />
+
       </body>
     </html>
   );
