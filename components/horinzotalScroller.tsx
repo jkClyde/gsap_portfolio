@@ -28,7 +28,7 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh] ">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div className="sticky top-0 flex h-screen  -mt-[80px] md:mt-0 items-center overflow-hidden">
         <motion.div 
             initial={{ opacity: 0, y:100 }}
             whileInView={{ opacity: 1, y: 0 }}
