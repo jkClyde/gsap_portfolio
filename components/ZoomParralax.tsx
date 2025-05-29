@@ -45,7 +45,7 @@ const ZoomParralax = () => {
             >
                 
             <div 
-                className="contentContainer md:w-[25vw] h-[20vh] md:h-[25vh] relative overflow-auto rounded shadow flex flex-col justify-center"
+                className="contentContainer md:w-[25vw] h-[23vh] md:h-[25vh] relative overflow-auto rounded shadow flex flex-col justify-center"
                 style={{
                 backgroundImage: `url(${picture1.src})`,
                 backgroundSize: 'cover',
