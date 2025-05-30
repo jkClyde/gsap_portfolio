@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 const HorinzotalScroller = () => {
   return (
-    <div>
+    <div id="sample-works">
       <h2 className="text-4xl md:text-5xl font-bold text-content mb-4 text-center">
           My Portfolio
        </h2>

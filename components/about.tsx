@@ -111,7 +111,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="about-section h-screen flex items-center justify-start relative">
+    <div className="about-section h-screen flex items-center justify-start relative" id='about'>
       <div className="w-full">
         <p className="relative text-start leading-[1] px-4 sm:px-8 md:px-[100px] bg-black h-fit py-[40px] transition-all duration-1000 text-4xl sm:text-6xl md:text-7xl lg:text-[96px] font-bold -mt-[80px] md:mt-0">
           I've worked in{' '}
