@@ -113,25 +113,17 @@ export default function Navbar() {
           delay: 1,
           duration: 1,
         }}
-        className={`fixed z-50 
-          ${isScrolled
-          // ? 'backdrop-blur-2xl shadow-2xl'
-          // : 'backdrop-blur-none'
-          } 
-          bg-black
-          transition-all duration-300 ease-out
-          w-full`
-        }
-
-
-
+        className={`fixed w-full z-50 ${isScrolled
+          ? 'backdrop-blur-2xl shadow-2xl'
+          : 'backdrop-blur-none'
+          } transition-all duration-300 ease-out`}
       >
-        <div className="max-w-full mx-auto px-6 py-3">
+        <div className="max-w-7xl mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex md:hidden items-center gap-2 group"
+              className="flex items-center gap-2 group"
             >
               <div className="relative h-8 w-8 rounded-full overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-tertiary animate-spin-slow [mask-image:linear-gradient(transparent,white)]" />
@@ -145,13 +137,20 @@ export default function Navbar() {
                 Randall Clyde
               </span>
             </motion.div>
-            <div className='hidden md:flex'>
-
-            </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-6 px-[15px]">
-    
+            <div className="hidden md:flex items-center gap-6">
+              <div className="flex items-center gap-6 bg-background/80 px-4 py-2 
+              rounded-full border border-white/5 shadow-lg shadow-primary/5">
+                {navItems.map((item, i) => (
+                  <MenuItem key={item.name} index={i} href={item.href}>
+                    {item.name}
+                  </MenuItem>
+                ))}
+              </div>
+
+              <div className="h-6 w-px bg-white/10 mx-2" />
+
               <div className="flex gap-3">
                 <a
                   href={socialLinks.github}
@@ -291,7 +290,16 @@ export default function Navbar() {
                   <div className="h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent" />
                   
                   <div className="flex gap-6 justify-center">
-                
+                    <motion.a
+                      href={socialLinks.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
+                      whileHover={{ y: -4, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <GithubIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
+                    </motion.a>
                     <motion.a
                       href={socialLinks.linkedin}
                       target="_blank"
