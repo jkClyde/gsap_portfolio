@@ -34,7 +34,7 @@ const ZoomParralax = () => {
 
 
   return (
-    <div ref={container} className="h-[300vh] top-0 relative ">
+    <div ref={container} className="h-[300vh] top-0 relative " id="home">
         {/* <ParticleCanvas/> */}
         <div className="sticky top-0 h-[100vh] overflow-hidden ">
 
