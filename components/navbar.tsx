@@ -1,22 +1,23 @@
 'use client';
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import MenuItem from './menu-items';
 import { GithubIcon, LinkedInIcon } from './social-icons';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon, EnvelopeIcon, DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 
 const navItems = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
-  { name: 'Sample Works', href: '#sample-works' },
-  { name: 'Portfolio', href: '#portfolio' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Works', href: '#sample-works' },
+  { name: 'Experience', href: '#experience' },
+  // { name: 'Contact', href: '#contact' },
 ];
 
 const socialLinks = {
   github: "https://github.com/yourusername",
   linkedin: "https://linkedin.com/in/yourusername",
-  twitter: "https://twitter.com/yourusername"
+  gmail: "mailto:hello@randallclyde.dev"
 };
 
 const menuVariants = {
@@ -104,6 +105,16 @@ export default function Navbar() {
     setIsMenuOpen(false);
   };
 
+  const handleResumeDownload = () => {
+    // Replace with your actual resume file path
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // Update this path to your resume file
+    link.download = 'Randall_Clyde_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <motion.nav
@@ -120,23 +131,25 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
-            {/* Logo Section */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-2 group"
-            >
-              <div className="relative h-8 w-8 rounded-full overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary to-tertiary animate-spin-slow [mask-image:linear-gradient(transparent,white)]" />
-                <div className="absolute inset-[2px] bg-background rounded-full flex items-center justify-center">
-                  <span className="font-bold bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">
-                    RC
-                  </span>
+            {/* Logo Section - Linked to Home */}
+            <Link href="/" className="flex items-center gap-2 group">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-2"
+              >
+                <div className="relative h-8 w-8 rounded-full overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-tertiary animate-spin-slow [mask-image:linear-gradient(transparent,white)]" />
+                  <div className="absolute inset-[2px] bg-background rounded-full flex items-center justify-center">
+                    <span className="font-bold bg-gradient-to-r from-primary to-tertiary bg-clip-text text-transparent">
+                      RC
+                    </span>
+                  </div>
                 </div>
-              </div>
-              <span className="font-semibold text-content/90 group-hover:text-primary transition-colors">
-                Randall Clyde
-              </span>
-            </motion.div>
+                <span className="font-semibold text-content/90 group-hover:text-primary transition-colors">
+                  Randall Clyde
+                </span>
+              </motion.div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6">
@@ -152,23 +165,35 @@ export default function Navbar() {
               <div className="h-6 w-px bg-white/10 mx-2" />
 
               <div className="flex gap-3">
-                <a
-                  href={socialLinks.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
-                >
-                  <GithubIcon className="h-5 w-5 text-content/80 group-hover:text-primary transition-colors" />
-                </a>
-                <a
+        
+                <Link
                   href={socialLinks.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
                 >
                   <LinkedInIcon className="h-5 w-5 text-content/80 group-hover:text-primary transition-colors" />
-                </a>
+                </Link>
+                <Link
+                  href={socialLinks.gmail}
+                  className="p-2 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
+                >
+                  <EnvelopeIcon className="h-5 w-5 text-content/80 group-hover:text-primary transition-colors" />
+                </Link>
               </div>
+
+              <div className="h-6 w-px bg-white/10 mx-2" />
+
+              {/* Resume Button - Simplified to match design */}
+              <motion.button
+                onClick={handleResumeDownload}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
+              >
+                <DocumentArrowDownIcon className="h-5 w-5 text-content/80 group-hover:text-primary transition-colors" />
+                <span className="text-sm text-content/80 group-hover:text-primary transition-colors">Resume</span>
+              </motion.button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -289,28 +314,64 @@ export default function Navbar() {
                 >
                   <div className="h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent" />
                   
-                  <div className="flex gap-6 justify-center">
-                    <motion.a
-                      href={socialLinks.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
+                  <div className="flex gap-4 justify-center">
+                    <motion.div
                       whileHover={{ y: -4, scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <GithubIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
-                    </motion.a>
-                    <motion.a
-                      href={socialLinks.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
+                      <Link
+                        href={socialLinks.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
+                      >
+                        <GithubIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
+                      </Link>
+                    </motion.div>
+                    <motion.div
                       whileHover={{ y: -4, scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <LinkedInIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
-                    </motion.a>
+                      <Link
+                        href={socialLinks.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block p-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
+                      >
+                        <LinkedInIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
+                      </Link>
+                    </motion.div>
+                    <motion.div
+                      whileHover={{ y: -4, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <Link
+                        href={socialLinks.gmail}
+                        className="block p-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
+                      >
+                        <EnvelopeIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
+                      </Link>
+                    </motion.div>
                   </div>
+
+                  {/* Resume Button for Mobile - Simplified */}
+                  <motion.div
+                    variants={itemVariants}
+                    className="flex justify-center pt-4"
+                  >
+                    <motion.button
+                      onClick={() => {
+                        handleResumeDownload();
+                        handleMenuItemClick();
+                      }}
+                      whileHover={{ y: -4, scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
+                    >
+                      <DocumentArrowDownIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
+                      <span className="text-purple-200 group-hover:text-white transition-colors font-medium">Resume</span>
+                    </motion.button>
+                  </motion.div>
 
                   {/* Contact Info */}
                   <motion.div

@@ -9,7 +9,7 @@ const HorinzotalScroller = () => {
   return (
     <div id="sample-works">
       <h2 className="text-4xl md:text-5xl font-bold text-content mb-4 text-center">
-          My Portfolio
+          Sample Works
        </h2>
        <div className="w-24 h-1 bg-gradient-to-r from-primary to-tertiary rounded-full mx-auto" />
 

@@ -14,9 +14,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-gray-100 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left items-center">
-          {/* Company Info */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-[25px]">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left items-center">
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex justify-center md:justify-start items-center gap-2 group"
@@ -34,7 +33,6 @@ const Footer = () => {
             </span>
           </motion.div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-lg mb-4 text-center">Quick Links</h3>
             <ul className="flex justify-center  flex-wrap gap-4 ">
@@ -51,7 +49,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social Media */}
           <div>
             <h3 className="font-semibold text-lg mb-4 text-center">Social Links</h3>
             <div className="flex justify-center  space-x-4">
@@ -69,10 +66,10 @@ const Footer = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col items-center text-center">
+        <div className=" border-gray-700 flex flex-col items-center text-center">
           <p className="text-sm text-gray-400">
             &copy; {new Date().getFullYear()} Clyde Corp. All rights reserved.
           </p>
@@ -80,13 +77,13 @@ const Footer = () => {
       </div>
 
       {/* Scroll to Top Button */}
-      <button
+      {/* <button
         onClick={scrollToTop}
         className="fixed bottom-8 right-8 p-2 bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-200"
         aria-label="Scroll to top"
       >
         <FaArrowUp className="w-6 h-6" />
-      </button>
+      </button> */}
     </footer>
   );
 };

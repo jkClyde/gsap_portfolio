@@ -15,8 +15,6 @@ import {
   SiWebflow,
 } from "react-icons/si";
 
-
-
 const skillCategories = [
   {
     title: "Frontend",
@@ -26,7 +24,6 @@ const skillCategories = [
       { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", level: 85 },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", level: 95 },
       { name: "CSS", icon: FaCss3Alt, color: "#1572B6", level: 95 }
-
     ]
   },
   {
@@ -35,7 +32,6 @@ const skillCategories = [
       { name: "Node.js", icon: FaNode, color: "#339933", level: 70 },
       { name: "MongoDB", icon: SiMongodb, color: "#47A248", level: 70 },
       { name: "PHP", icon: FaPhp, color: "#777BB4", level: 75 }
-
     ]
   },
   {
@@ -46,16 +42,13 @@ const skillCategories = [
       { name: "GoHighLevel", icon: SiWebflow, color: "#FF5722", level: 80 }
     ]
   },
-  
- 
 ];
 
 export default function Skills() {
   return (
-    <section className="py-32 relative" id="skills">
+    <section className="py-[15px] md:py-32 relative" id="skills">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
-       
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,62 +69,58 @@ export default function Skills() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-surface border border-white/10  p-8 hover:border-primary/30 transition-all"
+              className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2"
             >
-              <h3 className="text-2xl font-bold text-content mb-6 relative">
-                {category.title}
-                <div className="w-12 h-1 bg-gradient-to-r from-primary to-tertiary rounded-full absolute -bottom-2 left-0" />
-              </h3>
+              {/* Gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              {/* Content */}
+              <div className="relative z-10">
+                {/* Header */}
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+                  <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+                    {category.title}
+                  </h3>
+                </div>
 
-              <div className="space-y-6">
-                {category.skills.map((skill, j) => (
-                  <motion.div 
-                    key={j}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 0.3, delay: 0.1 * j }}
-                    className="space-y-2"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <skill.icon className="w-5 h-5" style={{ color: skill.color }} />
-                        <span className="text-content font-medium">{skill.name}</span>
+                {/* Skills */}
+                <div className="space-y-6">
+                  {category.skills.map((skill, j) => (
+                    <motion.div 
+                      key={j}
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.3, delay: 0.1 * j }}
+                      className="space-y-2"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <skill.icon className="w-5 h-5" style={{ color: skill.color }} />
+                          <span className="text-gray-300 font-medium">{skill.name}</span>
+                        </div>
+                        <span className="text-sm text-gray-400">{skill.level}%</span>
                       </div>
-                      <span className="text-sm text-content/60">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: 0.2 * j }}
-                        className="h-full rounded-full bg-gradient-to-r from-primary to-tertiary"
-                      />
-                    </div>
-                  </motion.div>
-                ))}
+                      <div className="h-2 w-full bg-gray-700/50 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          transition={{ duration: 1, delay: 0.2 * j }}
+                          className="h-full rounded-full bg-gradient-to-r from-blue-400 to-purple-500"
+                        />
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
             </motion.div>
           ))}
         </div>
-
-        {/* Call-to-action */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="flex justify-center mt-16 gap-6"
-        >
-          <button className="px-8 py-3 rounded-full bg-gradient-to-r from-primary to-tertiary text-white font-medium hover:opacity-90 transition-opacity">
-            Download Resume
-          </button>
-          <button className="relative px-8 py-3 rounded-full bg-surface border border-white/10 hover:border-primary/30 transition-all group">
-            <span className="text-content transition-colors relative z-[1]">
-              Contact Me
-            </span>
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/10 to-tertiary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </button>
-        </motion.div> */}
       </div>
     </section>
   );
-}   
+}
