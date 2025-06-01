@@ -29,32 +29,50 @@ const ExperienceCard: React.FC<ExperienceItemProps> = ({
   description,
   technologies
 }) => (
-  <div className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
+  <div className="group relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 sm:p-8 hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
     {/* Gradient overlay on hover */}
     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     
     {/* Content */}
     <div className="relative z-10">
-      {/* Header */}
-      <div className="flex justify-between items-start mb-6">
-        <div className="flex-1">
-          <div className="flex items-center gap-3 mb-2">
+      {/* Header - Mobile First Layout */}
+      <div className="mb-6">
+        {/* Mobile Layout - Stacked */}
+        <div className="block sm:hidden">
+          <div className="flex items-center gap-3 mb-3">
             <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
-            <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+            <h3 className="text-xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
               {company}
             </h3>
           </div>
-          <p className="text-blue-400 text-lg font-medium">{role}</p>
+          <p className="text-blue-400 text-base font-medium mb-3">{role}</p>
+          <div className="mb-2">
+            <p className="text-gray-300 font-semibold text-base">{duration}</p>
+            {/* <p className="text-gray-400 text-sm">{location}</p> */}
+          </div>
         </div>
-        <div className="text-right ml-4">
-          <p className="text-gray-300 font-semibold text-lg">{duration}</p>
-          <p className="text-gray-400 text-sm">{location}</p>
+        
+        {/* Desktop Layout - Side by Side */}
+        <div className="hidden sm:flex justify-between items-start">
+          <div className="flex-1">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full"></div>
+              <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors duration-300">
+                {company}
+              </h3>
+            </div>
+            <p className="text-blue-400 text-lg font-medium">{role}</p>
+          </div>
+          <div className="text-right ml-4">
+            <p className="text-gray-300 font-semibold text-lg">{duration}</p>
+            <p className="text-gray-400 text-sm">{location}</p>
+          </div>
         </div>
       </div>
       
       {/* Description */}
       <div className="mb-6">
-        <p className="text-gray-300 text-base leading-relaxed">
+        <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
           {description}
         </p>
       </div>
@@ -76,29 +94,22 @@ const ExperienceCard: React.FC<ExperienceItemProps> = ({
 const ExperienceSection: React.FC = () => {
   const experiences: ExperienceItemProps[] = [
     {
-      company: "Google",
-      role: "Software Engineer",
-      location: "Atlanta",
-      duration: "2022 - Present",
-      description: "I help build and scale Google Photos. Increased throughput of our primary services by 70%. Migrated backend service from Java to Go. Also helped make it look prettier.",
-      technologies: ["Angular", "Python", "GCP", "Git", "GitHub", "Java", "Golang", "K8s"]
+      company: "Technodeam Web Creations",
+      role: "Programmer",
+      location: "Baguio City",
+      duration: "July 2024 - Present",
+      description: "Contributed to developing and optimizing web applications using Wordpress, Php, React, and Next.js",
+      technologies: ["React", "NextJS", "Php", "Javascript", "TailwindCSS", "Wordpress"]
     },
     {
-      company: "Facebook",
-      role: "Software Engineer",
-      location: "San Francisco",
-      duration: "2020 - 2022",
-      description: "Senior Full Stack Engineer for Facebook Marketplace. Created a service from scratch to handle new listings. Also played some ping pong. It was fun.",
-      technologies: ["React", "Node", "PHP", "GraphQL", "Presto", "Cassandra"]
+      company: "iLearn Skills Development",
+      role: "OJT Intern – Junior Developer",
+      location: "La Trinidad",
+      duration: "December 2023 - May-2024",
+      description: "Assisted in developing and maintaining websites using PHP, JavaScript, and WordPress. Supported senior developers with feature implementation, debugging, and layout styling using Bootstrap.",
+      technologies: ["Php", "Javascript", "Bootstrap", "Wordpress"]
     },
-    {
-      company: "Amazon",
-      role: "Software Engineer",
-      location: "Seattle",
-      duration: "2016 - 2020",
-      description: "Data Engineer for store front. Built data pipelines with Spark and Airflow. Saw Bezos one time. He said he liked my paintings. I said I liked his hair.",
-      technologies: ["Java", "Python", "S3", "RDS", "Redshift", "PySpark", "HDFS", "Apache Airflow"]
-    }
+  
   ];
 
   return (
@@ -111,14 +122,14 @@ const ExperienceSection: React.FC = () => {
       <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent mb-4">
             Experience
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
         </div>
         
         {/* Experience Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 sm:gap-8 max-w-4xl mx-auto">
           {experiences.map((experience, index) => (
             <div
               key={index}
