@@ -46,7 +46,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section className="py-[15px] md:py-32 relative" id="skills">
+    <section className="pb-32 pt-[15px] md:pb-0 md:pt-0 md:py-32 relative" id="skills">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
         <motion.div
