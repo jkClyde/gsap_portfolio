@@ -95,7 +95,7 @@ const ExperienceSection: React.FC = () => {
   const experiences: ExperienceItemProps[] = [
     {
       company: "Technodeam Web Creations",
-      role: "Programmer",
+      role: "Web Developer",
       location: "Baguio City",
       duration: "July 2024 - Present",
       description: "Contributed to developing and optimizing web applications using Wordpress, Php, React, and Next.js",
