@@ -165,7 +165,7 @@ export default function Navbar() {
               <div className="h-6 w-px bg-white/10 mx-2" />
 
               <div className="flex gap-3">
-        
+             
                 <Link
                   href={socialLinks.linkedin}
                   target="_blank"
@@ -184,15 +184,11 @@ export default function Navbar() {
 
               <div className="h-6 w-px bg-white/10 mx-2" />
 
-              {/* Resume Button - Simplified to match design */}
+              {/* Projects Button - Matching desktop style */}
               <Link
-                // onClick={handleResumeDownload}
-                // whileHover={{ scale: 1.05 }}
-                // whileTap={{ scale: 0.95 }}
                 href="/projects"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
               >
-                {/* <DocumentArrowDownIcon className="h-5 w-5 text-content/80 group-hover:text-primary transition-colors" /> */}
                 <span className="text-sm text-content/80 group-hover:text-primary transition-colors">PROJECTS</span>
               </Link>
             </div>
@@ -236,35 +232,24 @@ export default function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             />
 
-            {/* Full Screen Mobile Menu */}
+            {/* Mobile Menu - Matching desktop style */}
             <motion.div
               variants={menuVariants}
               initial="closed"
               animate="open"
               exit="closed"
-              className="fixed right-0 top-0 h-full w-full sm:w-80  backdrop-blur-xl z-[56] md:hidden overflow-hidden border-l border-purple-500/20"
+              className="fixed right-0 top-0 h-full w-full sm:w-80 backdrop-blur-xl z-[56] md:hidden overflow-hidden bg-background/90 border-l border-white/10"
             >
-              {/* Background Pattern */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse" />
-                <div className="absolute top-40 -right-4 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-1000" />
-                <div className="absolute bottom-0 -right-4 w-72 h-72 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-xl animate-pulse delay-2000" />
+              {/* Subtle background gradient - more blue/purple */}
+              <div className="absolute inset-0 opacity-5">
+                <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-600 rounded-full mix-blend-multiply filter blur-xl" />
+                <div className="absolute top-40 -right-4 w-72 h-72 bg-indigo-600 rounded-full mix-blend-multiply filter blur-xl" />
+                <div className="absolute bottom-0 -right-4 w-72 h-72 bg-violet-600 rounded-full mix-blend-multiply filter blur-xl" />
               </div>
-
-              {/* Close Button */}
-              <motion.button
-                onClick={() => setIsMenuOpen(false)}
-                className="absolute top-6 right-6 p-3 rounded-full bg-purple-500/20 hover:bg-purple-500/30 transition-all duration-300 backdrop-blur-sm border border-purple-400/30 group z-10"
-                whileHover={{ scale: 1.1, rotate: 90 }}
-                whileTap={{ scale: 0.9 }}
-                variants={itemVariants}
-              >
-                <XMarkIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
-              </motion.button>
 
               {/* Menu Content */}
               <div className="relative h-full flex flex-col justify-center px-8">
-                {/* Navigation Items */}
+                {/* Navigation Items - Simpler, matching desktop */}
                 <motion.div
                   variants={{
                     open: {
@@ -274,9 +259,9 @@ export default function Navbar() {
                       transition: { staggerChildren: 0.05, staggerDirection: -1 }
                     }
                   }}
-                  className="space-y-8 mb-12"
+                  className="space-y-6 mb-12"
                 >
-                  {navItems.map((item, index) => (
+                  {navItems.map((item) => (
                     <motion.div
                       key={item.name}
                       variants={itemVariants}
@@ -285,105 +270,80 @@ export default function Navbar() {
                       <motion.a
                         href={item.href}
                         onClick={handleMenuItemClick}
-                        className="block text-3xl font-semibold text-purple-100 hover:text-white transition-all duration-300 group"
-                        whileHover={{ x: 10 }}
+                        className="block text-2xl font-medium text-content/90 hover:text-primary transition-all duration-300"
+                        whileHover={{ x: 8 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        <span className="flex items-center gap-4">
-                          <span className="text-sm text-purple-400/80 font-mono">
-                            0{index + 1}
-                          </span>
-                          <span className="group-hover:bg-gradient-to-r group-hover:from-purple-300 group-hover:to-fuchsia-300 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                            {item.name}
-                          </span>
-                        </span>
-                        <motion.div
-                          className="h-0.5 bg-gradient-to-r from-purple-400 to-fuchsia-400 mt-2 origin-left"
-                          initial={{ scaleX: 0 }}
-                          whileHover={{ scaleX: 1 }}
-                          transition={{ duration: 0.3 }}
-                        />
+                        {item.name}
                       </motion.a>
                     </motion.div>
                   ))}
                 </motion.div>
 
-                {/* Social Links */}
+                {/* Divider */}
                 <motion.div
                   variants={itemVariants}
-                  className="space-y-6"
+                  className="h-px bg-white/10 mb-8"
+                />
+
+                {/* Social Links - Matching desktop style */}
+                <motion.div
+                  variants={itemVariants}
+                  className="flex gap-3 mb-8"
                 >
-                  <div className="h-px bg-gradient-to-r from-transparent via-purple-400/30 to-transparent" />
-                  
-                  <div className="flex gap-4 justify-center">
-                    <motion.div
-                      whileHover={{ y: -4, scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Link
-                        href={socialLinks.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block p-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
-                      >
-                        <GithubIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
-                      </Link>
-                    </motion.div>
-                    <motion.div
-                      whileHover={{ y: -4, scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Link
-                        href={socialLinks.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block p-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
-                      >
-                        <LinkedInIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
-                      </Link>
-                    </motion.div>
-                    <motion.div
-                      whileHover={{ y: -4, scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      <Link
-                        href={socialLinks.gmail}
-                        className="block p-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
-                      >
-                        <EnvelopeIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
-                      </Link>
-                    </motion.div>
-                  </div>
-
-                  {/* Resume Button for Mobile - Simplified */}
-                  <motion.div
-                    variants={itemVariants}
-                    className="flex justify-center pt-4"
+                  <Link
+                    href={socialLinks.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
                   >
-                    <motion.button
-                      onClick={() => {
-                        handleResumeDownload();
-                        handleMenuItemClick();
-                      }}
-                      whileHover={{ y: -4, scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-purple-500/20 backdrop-blur-sm hover:bg-purple-500/30 transition-all duration-300 group border border-purple-400/20"
-                    >
-                      <DocumentArrowDownIcon className="h-6 w-6 text-purple-200 group-hover:text-white transition-colors" />
-                      <span className="text-purple-200 group-hover:text-white transition-colors font-medium">Resume</span>
-                    </motion.button>
-                  </motion.div>
-
-                  {/* Contact Info */}
-                  <motion.div
-                    variants={itemVariants}
-                    className="text-center pt-4"
+                    <GithubIcon className="h-6 w-6 text-content/80 group-hover:text-primary transition-colors" />
+                  </Link>
+                  <Link
+                    href={socialLinks.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
                   >
-                    <p className="text-sm text-purple-300/60 mb-2">Get in touch</p>
-                    <p className="text-purple-300 font-mono text-sm">
-                      hello@randallclyde.dev
-                    </p>
-                  </motion.div>
+                    <LinkedInIcon className="h-6 w-6 text-content/80 group-hover:text-primary transition-colors" />
+                  </Link>
+                  <Link
+                    href={socialLinks.gmail}
+                    className="p-3 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
+                  >
+                    <EnvelopeIcon className="h-6 w-6 text-content/80 group-hover:text-primary transition-colors" />
+                  </Link>
+                </motion.div>
+
+                {/* Divider */}
+                <motion.div
+                  variants={itemVariants}
+                  className="h-px bg-white/10 mb-8"
+                />
+
+                {/* Projects Button - Matching desktop style */}
+                <motion.div
+                  variants={itemVariants}
+                  className="mb-6"
+                >
+                  <Link
+                    href="/projects"
+                    onClick={handleMenuItemClick}
+                    className="flex items-center gap-3 px-4 py-3 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
+                  >
+                    <span className="text-sm text-content/80 group-hover:text-primary transition-colors font-medium">PROJECTS</span>
+                  </Link>
+                </motion.div>
+
+                {/* Contact Info - Simplified */}
+                <motion.div
+                  variants={itemVariants}
+                  className="text-left"
+                >
+                  <p className="text-sm text-content/60 mb-1">Get in touch</p>
+                  <p className="text-content/80 font-mono text-sm">
+                    hello@randallclyde.dev
+                  </p>
                 </motion.div>
               </div>
             </motion.div>

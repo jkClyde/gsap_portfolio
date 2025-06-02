@@ -3,8 +3,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const HorinzotalScroller = () => {
   return (
@@ -67,19 +67,21 @@ const ViewMoreArrow = () => {
       whileHover={{ scale: 1.05 }}
       className="flex flex-col items-center justify-center h-[75vh] w-[200px] cursor-pointer"
     >
-      <motion.div
-        initial={{ x: -5 }}
-        animate={{ x: 5 }}
-        transition={{ 
-          repeat: Infinity, 
-          repeatType: "reverse", 
-          duration: 0.8 
-        }}
-        className="flex flex-col items-center gap-4"
-      >
-        <ArrowRight size={48} className="text-white" />
-        <Link href="/projects" className="font-medium text-lg text-white">View More Projects</Link>
-      </motion.div>
+      <Link href="/projects" className="flex flex-col items-center gap-4">
+        <motion.div
+          initial={{ x: -5 }}
+          animate={{ x: 5 }}
+          transition={{ 
+            repeat: Infinity, 
+            repeatType: "reverse", 
+            duration: 0.8 
+          }}
+          className="flex flex-col items-center gap-4"
+        >
+          <ArrowRight size={48} className="text-white" />
+          <p className="font-medium text-lg text-white">View More Projects</p>
+        </motion.div>
+      </Link>
     </motion.div>
   );
 };
