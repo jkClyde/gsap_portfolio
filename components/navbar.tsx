@@ -185,15 +185,16 @@ export default function Navbar() {
               <div className="h-6 w-px bg-white/10 mx-2" />
 
               {/* Resume Button - Simplified to match design */}
-              <motion.button
-                onClick={handleResumeDownload}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <Link
+                // onClick={handleResumeDownload}
+                // whileHover={{ scale: 1.05 }}
+                // whileTap={{ scale: 0.95 }}
+                href="/projects"
                 className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 hover:bg-primary/10 transition-colors group"
               >
-                <DocumentArrowDownIcon className="h-5 w-5 text-content/80 group-hover:text-primary transition-colors" />
-                <span className="text-sm text-content/80 group-hover:text-primary transition-colors">Resume</span>
-              </motion.button>
+                {/* <DocumentArrowDownIcon className="h-5 w-5 text-content/80 group-hover:text-primary transition-colors" /> */}
+                <span className="text-sm text-content/80 group-hover:text-primary transition-colors">PROJECTS</span>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}

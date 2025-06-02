@@ -4,6 +4,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const HorinzotalScroller = () => {
   return (
@@ -77,7 +78,7 @@ const ViewMoreArrow = () => {
         className="flex flex-col items-center gap-4"
       >
         <ArrowRight size={48} className="text-white" />
-        <p className="font-medium text-lg text-white">View More Projects</p>
+        <Link href="/projects" className="font-medium text-lg text-white">View More Projects</Link>
       </motion.div>
     </motion.div>
   );
