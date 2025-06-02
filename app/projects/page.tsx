@@ -135,7 +135,7 @@ interface ProjectProps {
   title: string;
   description: string;
   image: string;
-  category: 'WordPress' | 'Next.js' | 'React' | 'All';
+  category: 'WordPress' | 'Next.js' | 'React' | 'All' | 'GoHighLevel';
   techStack: string[];
   status?: 'development' | 'under-development' | 'frontend-only'; // Made optional since live projects won't have status
   designedBy?: string;
@@ -194,7 +194,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
       
       {/* Action Buttons */}
       <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-        {liveUrl && status !== 'development' && (
+        {liveUrl && (
           <a
             href={liveUrl}
             target="_blank"
@@ -248,7 +248,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
 const ProjectsSection: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('All');
   
-  const filters = ['All', 'WordPress', 'Next.js'];
+  const filters = ['All', 'WordPress', 'Next.js', 'GoHighLevel'];
   
   // Updated projects data with proper credits handling
   const projects: ProjectProps[] = [
@@ -320,7 +320,6 @@ const ProjectsSection: React.FC = () => {
       category: "Next.js",
       techStack: ["Next.js", "Tailwind CSS"],
       liveUrl: "https://clynime.vercel.app/",
-       designedBy: "Technodream Web Designs"
 
     },
 
@@ -380,6 +379,29 @@ const ProjectsSection: React.FC = () => {
       liveUrl: "https://cly-2rism.vercel.app/",
       designedBy: "https://www.figma.com/@vicomarcellus"
     },
+
+    {
+      id: 13,
+      title: "Baby Stream ",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/babysoft.png",
+      category: "WordPress",
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://babysoftsteamcarpetandtilecleaning.com/",
+      designedBy: "Technodream Web Designs"
+    },
+
+     {
+      id: 14,
+      title: "The Myo Center",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/myo.png",
+      category: "GoHighLevel",
+      techStack: ["GoHighLevel"],
+      liveUrl: "https://themyocenter.com/",
+      designedBy: "Technodream Web Designs"
+    },
+
 
   ];
   
