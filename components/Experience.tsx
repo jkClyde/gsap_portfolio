@@ -65,7 +65,7 @@ const ExperienceCard: React.FC<ExperienceItemProps> = ({
           </div>
           <div className="text-right ml-4">
             <p className="text-gray-300 font-semibold text-lg">{duration}</p>
-            <p className="text-gray-400 text-sm">{location}</p>
+            {/* <p className="text-gray-400 text-sm">{location}</p> */}
           </div>
         </div>
       </div>
