@@ -299,7 +299,7 @@ const ProjectsSection: React.FC = () => {
       image: "/projects/nextJS/property-hive.png",
       category: "Next.js",
       techStack: ["NextJS", "Tailwind CSS", 'MongoDB'],
-      liveUrl: "https://clyde-sports.netlify.app/",
+      liveUrl: "https://property-hive-ten.vercel.app/",
     },
     {
       id: 6,

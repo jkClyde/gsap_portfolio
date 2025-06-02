@@ -2,22 +2,23 @@
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import MenuItem from './menu-items';
 import { GithubIcon, LinkedInIcon } from './social-icons';
 import { Bars3Icon, XMarkIcon, EnvelopeIcon, DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 
 const navItems = [
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Works', href: '#sample-works' },
-  { name: 'Experience', href: '#experience' },
+  { name: 'About', href: '/#about' },
+  { name: 'Skills', href: '/#skills' },
+  { name: 'Works', href: '/#sample-works' },
+  { name: 'Experience', href: '/#experience' },
   // { name: 'Contact', href: '#contact' },
 ];
 
 const socialLinks = {
   github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
-  gmail: "mailto:hello@randallclyde.dev"
+  linkedin: "https://www.linkedin.com/in/randall-clyde-aquin-437607254/",
+  gmail: "mailto:aquin.randall@gmail.com"
 };
 
 const menuVariants = {
@@ -83,6 +84,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollY } = useScroll();
+  const pathname = usePathname();
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     setIsScrolled(latest > 50);
@@ -341,9 +343,9 @@ export default function Navbar() {
                   className="text-left"
                 >
                   <p className="text-sm text-content/60 mb-1">Get in touch</p>
-                  <p className="text-content/80 font-mono text-sm">
-                    hello@randallclyde.dev
-                  </p>
+                  <Link href='mailto:aquin.randall@gmail.com' className="text-content/80 font-mono text-sm">
+                    aquin.randall@gmail.com
+                  </Link>
                 </motion.div>
               </div>
             </motion.div>

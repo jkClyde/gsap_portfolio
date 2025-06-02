@@ -71,7 +71,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className=" border-gray-700 flex flex-col items-center text-center">
           <p className="text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Clyde Corp. All rights reserved.
+            &copy; {new Date().getFullYear()} Randall Clyde. All rights reserved.
           </p>
         </div>
       </div>

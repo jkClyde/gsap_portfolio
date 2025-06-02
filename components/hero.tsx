@@ -5,6 +5,7 @@ import { motion, useScroll } from "framer-motion";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import Link from "next/link";
 
 
 
@@ -84,7 +85,10 @@ export default function Hero() {
                                         relative z-10 px-8 py-4 overflow-hidden border-2 rounded-full group mx-auto"
                             >
                             <span>
-                            Explore Work
+                                <Link href="/projects" >
+                                 Explore Work
+                                </Link>
+                           
                             </span>
                             </motion.button>
                     </div>
