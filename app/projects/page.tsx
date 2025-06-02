@@ -34,6 +34,7 @@ const techIcons = {
   'Next.js': { icon: SiNextdotjs, color: '#000000' },
   'NextJS': { icon: SiNextdotjs, color: '#000000' },
   'WordPress': { icon: FaWordpress, color: '#21759B' },
+  'Wordpress': { icon: FaWordpress, color: '#21759B' },
   'JavaScript': { icon: SiJavascript, color: '#F7DF1E' },
   'TypeScript': { icon: SiTypescript, color: '#3178C6' },
   'Typescript': { icon: SiTypescript, color: '#3178C6' },
@@ -46,8 +47,14 @@ const techIcons = {
   'Postgres': { icon: SiPostgresql, color: '#336791' },
   'Firebase': { icon: SiFirebase, color: '#FFCA28' },
   'Framer Motion': { icon: SiFramer, color: '#0055FF' },
-  'GSAP': { icon: SiGreensock, color: '#88CE02' }
-};
+  'GSAP': { icon: SiGreensock, color: '#88CE02' },
+  'Elementor': { icon: FaWordpress, color: '#92003B' },
+  'Kadence': { icon: FaWordpress, color: '#3F51B5' },
+  'GoHighLevel': { icon: FaCode, color: '#4F46E5' }
+} as const;
+
+// Create a type for valid tech stack keys
+type TechStackKey = keyof typeof techIcons;
 
 // Status configurations
 const statusConfig = {
@@ -72,14 +79,15 @@ const statusConfig = {
     borderColor: 'border-blue-500/30',
     icon: FaEye
   }
-};
+} as const;
 
 interface TechBadgeProps {
   tech: string;
 }
 
 const TechBadge: React.FC<TechBadgeProps> = ({ tech }) => {
-  const techInfo = techIcons[tech];
+  // Type guard to check if tech is a valid key
+  const techInfo = techIcons[tech as TechStackKey];
   const IconComponent = techInfo?.icon;
   
   return (
@@ -137,7 +145,7 @@ interface ProjectProps {
   image: string;
   category: 'WordPress' | 'Next.js' | 'React' | 'All' | 'GoHighLevel';
   techStack: string[];
-  status?: 'development' | 'under-development' | 'frontend-only'; // Made optional since live projects won't have status
+  status?: 'development' | 'under-development' | 'frontend-only';
   designedBy?: string;
   liveUrl?: string;
   githubUrl?: string;
@@ -309,7 +317,7 @@ const ProjectsSection: React.FC = () => {
       category: "Next.js",
       techStack: ["React", "Tailwind CSS"],
       liveUrl: "https://clyde-sports.netlify.app/",
-            status: "frontend-only",
+      status: "frontend-only",
 
     },
     {
