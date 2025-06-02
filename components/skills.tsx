@@ -13,6 +13,8 @@ import {
   SiTailwindcss, 
   SiMongodb, 
   SiWebflow,
+  SiGreensock,
+  SiFramer
 } from "react-icons/si";
 
 const skillCategories = [
@@ -21,24 +23,27 @@ const skillCategories = [
     skills: [
       { name: "React", icon: FaReact, color: "#61DAFB", level: 85 },
       { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 90 },
-      { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", level: 85 },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", level: 95 },
-      { name: "CSS", icon: FaCss3Alt, color: "#1572B6", level: 95 }
+      // { name: "CSS", icon: FaCss3Alt, color: "#1572B6", level: 95 },
+      { name: "GSAP", icon: SiGreensock, color: "#88CE02", level: 80 },
+      { name: "Framer Motion", icon: SiFramer, color: "#0055FF", level: 85 }
     ]
   },
   {
     title: "Backend",
     skills: [
       { name: "Node.js", icon: FaNode, color: "#339933", level: 70 },
-      { name: "MongoDB", icon: SiMongodb, color: "#47A248", level: 70 },
-      { name: "PHP", icon: FaPhp, color: "#777BB4", level: 75 }
+      // { name: "MongoDB", icon: SiMongodb, color: "#47A248", level: 70 },
+      { name: "PHP", icon: FaPhp, color: "#777BB4", level: 75 },
+   { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", level: 85 },
+
     ]
   },
   {
     title: "CMS & Website Builders",
     skills: [
       { name: "WordPress", icon: FaWordpress, color: "#21759B", level: 95 },
-      { name: "Webflow", icon: SiWebflow, color: "#4353FF", level: 75 },
+      // { name: "Webflow", icon: SiWebflow, color: "#4353FF", level: 75 },
       { name: "GoHighLevel", icon: SiWebflow, color: "#FF5722", level: 80 }
     ]
   },
