@@ -260,6 +260,53 @@ const ProjectsSection: React.FC = () => {
   
   // Updated projects data with proper credits handling
   const projects: ProjectProps[] = [
+
+         {
+      id: 15,
+      title: "Innovative Mechanical Concepts",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/insight.png",
+      category: "WordPress",
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://www.innovative-mech.com/",
+      designedBy: "Technodream Web Designs"
+    },
+
+      {
+      id: 8,
+      title: "MERCURY CONSTRUCTION",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/mercury.png",
+      category: "WordPress",
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://mercuryconstruction.com/",
+      designedBy: "Mercury Construction , Technodream Web Designs"
+    },
+
+         {
+      id: 14,
+      title: "The Myo Center",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/myo.png",
+      category: "GoHighLevel",
+      techStack: ["GoHighLevel"],
+      liveUrl: "https://themyocenter.com/",
+      designedBy: "Technodream Web Designs"
+    },  
+
+     {
+      id: 16,
+      title: "Archer properties",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/archer``.png",
+      category: "WordPress",
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "hhttps://archerpropertyservices.com/",
+      designedBy: "Technodream Web Designs"
+    },  
+
+
+
     {
       id: 1,
       title: "Project Management App",
@@ -331,18 +378,6 @@ const ProjectsSection: React.FC = () => {
 
     },
 
-     {
-      id: 8,
-      title: "MERCURY CONSTRUCTION",
-      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
-      image: "/projects/wordpress/mercury.png",
-      category: "WordPress",
-      techStack: ["Wordpress", "Elementor"],
-      liveUrl: "https://mercuryconsdev.wpenginepowered.com/",
-      designedBy: "Mercury Construction , Technodream Web Designs"
-    },
-
-
        {
       id: 9,
       title: "VDS",
@@ -396,17 +431,6 @@ const ProjectsSection: React.FC = () => {
       category: "WordPress",
       techStack: ["Wordpress", "Elementor"],
       liveUrl: "https://babysoftsteamcarpetandtilecleaning.com/",
-      designedBy: "Technodream Web Designs"
-    },
-
-     {
-      id: 14,
-      title: "The Myo Center",
-      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
-      image: "/projects/myo.png",
-      category: "GoHighLevel",
-      techStack: ["GoHighLevel"],
-      liveUrl: "https://themyocenter.com/",
       designedBy: "Technodream Web Designs"
     },
 
