@@ -279,7 +279,8 @@ const ProjectsSection: React.FC = () => {
       category: "WordPress",
       techStack: ["Wordpress", "Elementor"],
       liveUrl: "https://mercuryconstruction.com/",
-      designedBy: "Mercury Construction , Technodream Web Designs"
+      designedBy: "Mercury Construction , Technodream Web Designs"  
+      
     },
 
      {
