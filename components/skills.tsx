@@ -4,9 +4,11 @@ import {
   FaNode, 
   FaReact, 
   FaWordpress,
-  FaCss3Alt ,
-  FaPhp 
+  FaCss3Alt,
+  FaPhp,
+  FaVuejs
 } from "react-icons/fa";
+
 import { 
   SiJavascript, 
   SiNextdotjs, 
@@ -14,21 +16,25 @@ import {
   SiMongodb, 
   SiWebflow,
   SiGreensock,
-  SiFramer
+  SiFramer,
+  SiNuxtdotjs
 } from "react-icons/si";
 
+
 const skillCategories = [
-  {
-    title: "Frontend",
-    skills: [
-      { name: "React", icon: FaReact, color: "#61DAFB", level: 85 },
-      { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 90 },
-      { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", level: 95 },
-      // { name: "CSS", icon: FaCss3Alt, color: "#1572B6", level: 95 },
-      { name: "GSAP", icon: SiGreensock, color: "#88CE02", level: 80 },
-      { name: "Framer Motion", icon: SiFramer, color: "#0055FF", level: 85 }
-    ]
-  },
+{
+  title: "Frontend",
+  skills: [
+    { name: "React", icon: FaReact, color: "#61DAFB", level: 85 },
+    { name: "Next.js", icon: SiNextdotjs, color: "#000000", level: 90 },
+    { name: "Vue.js", icon: FaVuejs, color: "#42B883", level: 85 },
+    { name: "Nuxt.js", icon: SiNuxtdotjs, color: "#00DC82", level: 85 },
+    { name: "Tailwind CSS", icon: SiTailwindcss, color: "#06B6D4", level: 95 },
+    { name: "GSAP", icon: SiGreensock, color: "#88CE02", level: 80 },
+    { name: "Framer Motion", icon: SiFramer, color: "#0055FF", level: 85 }
+  ]
+},
+
   {
     title: "Backend",
     skills: [

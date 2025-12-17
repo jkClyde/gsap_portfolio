@@ -86,7 +86,6 @@ interface TechBadgeProps {
 }
 
 const TechBadge: React.FC<TechBadgeProps> = ({ tech }) => {
-  // Type guard to check if tech is a valid key
   const techInfo = techIcons[tech as TechStackKey];
   const IconComponent = techInfo?.icon;
   
@@ -272,7 +271,7 @@ const ProjectsSection: React.FC = () => {
       designedBy: "Technodream Web Designs"
     },
 
-      {
+    {
       id: 8,
       title: "MERCURY CONSTRUCTION",
       description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
@@ -283,7 +282,73 @@ const ProjectsSection: React.FC = () => {
       designedBy: "Mercury Construction , Technodream Web Designs"
     },
 
-         {
+     {
+      id: 8,
+      title: "Hometown Pediatric Dermatology",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/hometown.png",
+      category: "WordPress",
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://beta11.technodreamcenter.com/hometownpediatricdermatology.com/",
+      designedBy: "Mercury Construction , Technodream Web Designs"
+    },
+
+    {
+      id: 21,
+      title: "EAGLE INVESTIGATIONS GROUP",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/eag.png",
+      category: "WordPress",
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://eagleinvestigationsgroup.com/",
+      designedBy: "Technodream Web Designs"
+    },
+
+    {
+      id: 22,
+      title: "TNC FOUNDATION",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/tnc.png",
+      category: "WordPress",
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://tncfoundations.org/",
+      designedBy: "Technodream Web Designs"
+    },
+    {
+      id: 23  ,
+      title: " Lee Midtown Salon  ",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/lee.png",
+      category: "WordPress",
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://leemidtownsalon.com/ ",
+      designedBy: "Technodream Web Designs"
+    },
+
+      {
+      id: 24  ,
+      title: "GS Benchmark Real Estate and Property Management",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/gs.png",
+      category: "WordPress",  
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://beta11.technodreamcenter.com/gsbenchmark.com",
+      designedBy: "Technodream Web Designs"
+    },
+
+    {
+      id: 25  ,
+      title: "Aggressive Excavation Inc",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/aggressive.png",
+      category: "WordPress",  
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://beta11.technodreamcenter.com/aggressiveexcavationinc.com/ ",
+      designedBy: "Technodream Web Designs"
+    },
+
+
+    {
       id: 14,
       title: "The Myo Center",
       description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
@@ -298,26 +363,26 @@ const ProjectsSection: React.FC = () => {
       id: 16,
       title: "Archer properties",
       description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
-      image: "/projects/archer``.png",
+      image: "/projects/archer.png",
       category: "WordPress",
       techStack: ["Wordpress", "Elementor"],
-      liveUrl: "hhttps://archerpropertyservices.com/",
+      liveUrl: "https://archerpropertyservices.com/",
       designedBy: "Technodream Web Designs"
     },  
 
 
 
-    {
-      id: 1,
-      title: "Project Management App",
-      description: "A creative portfolio website showcasing modern design principles with smooth animations and interactive elements.",
-      image: "/projects/nextJS/project-manager.png",
-      category: "Next.js",
-      techStack: ["Next.js", "Tailwind CSS", "MongoDB"],
-      liveUrl: "https://cly-project-manager.netlify.app/",
-      githubUrl: "https://example.com",
-      featured: true
-    },
+    // {
+    //   id: 1,
+    //   title: "Project Management App",
+    //   description: "A creative portfolio website showcasing modern design principles with smooth animations and interactive elements.",
+    //   image: "/projects/nextJS/project-manager.png",
+    //   category: "Next.js",
+    //   techStack: ["Next.js", "Tailwind CSS", "MongoDB"],
+    //   liveUrl: "https://cly-project-manager.netlify.app/",
+    //   githubUrl: "https://example.com",
+    //   featured: true
+    // },
     {
       id: 2,
       title: "BDN Marketplace",
