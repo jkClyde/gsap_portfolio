@@ -261,7 +261,7 @@ const ProjectsSection: React.FC = () => {
   const projects: ProjectProps[] = [
 
          {
-      id: 15,
+      id: 150,
       title: "Innovative Mechanical Concepts",
       description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
       image: "/projects/wordpress/insight.png",
@@ -271,17 +271,7 @@ const ProjectsSection: React.FC = () => {
       designedBy: "Technodream Web Designs"
     },
 
-    {
-      id: 8,
-      title: "MERCURY CONSTRUCTION",
-      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
-      image: "/projects/wordpress/mercury.png",
-      category: "WordPress",
-      techStack: ["Wordpress", "Elementor"],
-      liveUrl: "https://mercuryconstruction.com/",
-      designedBy: "Mercury Construction , Technodream Web Designs"  
-      
-    },
+
 
      {
       id: 8,
