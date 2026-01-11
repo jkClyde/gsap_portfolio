@@ -295,6 +295,17 @@ const ProjectsSection: React.FC = () => {
       designedBy: "Technodream Web Designs"
     },
 
+     {
+      id: 151,
+      title: " Pacific Paradise Estates",
+      description: "A modern blog platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/aloha.png",
+      category: "WordPress",
+      techStack: ["Wordpress", "Elementor"],
+      liveUrl: "https://beta11.technodreamcenter.com/alohamichi.com/",
+      designedBy: "Technodream Web Designs"
+    },
+
     {
       id: 22,
       title: "TNC FOUNDATION",
@@ -334,7 +345,7 @@ const ProjectsSection: React.FC = () => {
       image: "/projects/wordpress/aggressive.png",
       category: "WordPress",  
       techStack: ["Wordpress", "Elementor"],
-      liveUrl: "https://beta11.technodreamcenter.com/aggressiveexcavationinc.com/ ",
+      liveUrl: "https://aggressiveexcavationinc.com/",
       designedBy: "Technodream Web Designs"
     },
 
@@ -392,7 +403,7 @@ const ProjectsSection: React.FC = () => {
       image: "/projects/nextJS/libirfy-client.png",
       category: "Next.js",
       techStack: ["Next.js", "Tailwind CSS", "Postgres", "Typescript"],
-      liveUrl: "https://js-library-blush.vercel.app/"
+      // liveUrl: "https://js-library-blush.vercel.app/"
     },
     {
       id: 4,
