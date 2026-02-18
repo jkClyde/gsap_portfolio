@@ -279,6 +279,17 @@ const ProjectsSection: React.FC = () => {
       liveUrl: "https://www.innovative-mech.com/",
       designedBy: "Technodream Web Designs"
     },
+
+    {
+      id: 3,
+      title: "Hometown Pediatric Dermatology",
+      description: "A modern WordPress site with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/hometown.png",
+      category: "WordPress",
+      techStack: ["WordPress", "Elementor"],
+      liveUrl: "https://hometownpediatricdermatology.com/",
+      designedBy: "Hometown Pediatric Dermatology"
+    },
     {
       id: 22,
       title: "Mojito Cocktails ",
@@ -289,15 +300,27 @@ const ProjectsSection: React.FC = () => {
       liveUrl: "https://mojito-cly.vercel.app/",
       designedBy: "jsMastery"
     },
+
     {
-      id: 3,
-      title: "Hometown Pediatric Dermatology",
+      id: 10,
+      title: "The Myo Center",
+      description: "A modern GoHighLevel site with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/myo.png",
+      category: "GoHighLevel",
+      techStack: ["GoHighLevel"],
+      liveUrl: "https://themyocenter.com/",
+      designedBy: "Technodream Web Designs"
+    },
+
+    {
+      id: 8,
+      title: "GS Benchmark Real Estate and Property Management",
       description: "A modern WordPress site with content management, SEO optimization, and social sharing capabilities.",
-      image: "/projects/wordpress/hometown.png",
+      image: "/projects/wordpress/gs.png",
       category: "WordPress",
       techStack: ["WordPress", "Elementor"],
-      liveUrl: "https://beta11.technodreamcenter.com/hometownpediatricdermatology.com/",
-      designedBy: "Mercury Construction, Technodream Web Designs"
+      liveUrl: "gsbenchmark.com",
+      designedBy: "Technodream Web Designs"
     },
     {
       id: 4,
@@ -309,16 +332,7 @@ const ProjectsSection: React.FC = () => {
       liveUrl: "https://eagleinvestigationsgroup.com/",
       designedBy: "Technodream Web Designs"
     },
-    {
-      id: 5,
-      title: "Pacific Paradise Estates",
-      description: "A modern WordPress site with content management, SEO optimization, and social sharing capabilities.",
-      image: "/projects/wordpress/aloha.png",
-      category: "WordPress",
-      techStack: ["WordPress", "Elementor"],
-      liveUrl: "https://beta11.technodreamcenter.com/alohamichi.com/",
-      designedBy: "Technodream Web Designs"
-    },
+
     {
       id: 6,
       title: "TNC FOUNDATION",
@@ -339,16 +353,7 @@ const ProjectsSection: React.FC = () => {
       liveUrl: "https://leemidtownsalon.com/",
       designedBy: "Technodream Web Designs"
     },
-    {
-      id: 8,
-      title: "GS Benchmark Real Estate and Property Management",
-      description: "A modern WordPress site with content management, SEO optimization, and social sharing capabilities.",
-      image: "/projects/wordpress/gs.png",
-      category: "WordPress",
-      techStack: ["WordPress", "Elementor"],
-      liveUrl: "https://beta11.technodreamcenter.com/gsbenchmark.com",
-      designedBy: "Technodream Web Designs"
-    },
+
     {
       id: 9,
       title: "Aggressive Excavation Inc",
@@ -359,16 +364,7 @@ const ProjectsSection: React.FC = () => {
       liveUrl: "https://aggressiveexcavationinc.com/",
       designedBy: "Technodream Web Designs"
     },
-    {
-      id: 10,
-      title: "The Myo Center",
-      description: "A modern GoHighLevel site with content management, SEO optimization, and social sharing capabilities.",
-      image: "/projects/myo.png",
-      category: "GoHighLevel",
-      techStack: ["GoHighLevel"],
-      liveUrl: "https://themyocenter.com/",
-      designedBy: "Technodream Web Designs"
-    },
+
     {
       id: 11,
       title: "Archer Properties",
@@ -403,6 +399,16 @@ const ProjectsSection: React.FC = () => {
       category: "Next.js",
       techStack: ["NextJS", "Tailwind CSS", "MongoDB"],
       liveUrl: "https://property-hive-ten.vercel.app/"
+    },
+    {
+      id: 5,
+      title: "Pacific Paradise Estates",
+      description: "A modern WordPress site with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/aloha.png",
+      category: "WordPress",
+      techStack: ["WordPress", "Elementor"],
+      liveUrl: "https://beta11.technodreamcenter.com/alohamichi.com/",
+      designedBy: "Technodream Web Designs"
     },
     {
       id: 15,
