@@ -258,6 +258,19 @@ const ProjectsSection: React.FC = () => {
 
   // Updated projects data with proper credits handling
   const projects: ProjectProps[] = [
+    {
+      id: 23,
+      title: "Stay Vista",
+      description: "A modern eCommerce platform with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/nextJS/stay-vista.png",
+      category: "Next.js",
+      techStack: ["Next.js", "Tailwind CSS"],
+      liveUrl: "https://stay-vista-flame.vercel.app/",
+      designedBy: "Me",
+      status: 'development'
+    },
+
+
 
     {
       id: 1,
@@ -269,6 +282,20 @@ const ProjectsSection: React.FC = () => {
       liveUrl: "https://bdn-shop.com",
       designedBy: "Me"
     },
+
+    {
+      id: 24,
+      title: "Wall To Wall Home Improvement & Design",
+      description: "A modern WordPress site with content management, SEO optimization, and social sharing capabilities.",
+      image: "/projects/wordpress/wtw.png",
+      category: "WordPress",
+      techStack: ["WordPress", "Elementor"],
+      liveUrl: "https://beta11.technodreamcenter.com/wtwhandyman.com",
+      designedBy: "Technodream Web Designs",
+      status: 'development'
+
+    },
+
     {
       id: 2,
       title: "Innovative Mechanical Concepts",
@@ -383,23 +410,23 @@ const ProjectsSection: React.FC = () => {
       category: "Next.js",
       techStack: ["Next.js", "Tailwind CSS", "Postgres", "Typescript"]
     },
-    {
-      id: 13,
-      title: "Librify - Admin Dashboard",
-      description: "A professional admin dashboard built with Next.js, featuring custom themes and advanced functionality.",
-      image: "/projects/nextJS/librify-dashboar.png",
-      category: "Next.js",
-      techStack: ["Next.js", "Tailwind CSS", "Postgres", "Typescript"]
-    },
-    {
-      id: 14,
-      title: "PropertyHive",
-      description: "A collaborative task management application with real-time updates and team collaboration features.",
-      image: "/projects/nextJS/property-hive.png",
-      category: "Next.js",
-      techStack: ["NextJS", "Tailwind CSS", "MongoDB"],
-      liveUrl: "https://property-hive-ten.vercel.app/"
-    },
+    // {
+    //   id: 13,
+    //   title: "Librify - Admin Dashboard",
+    //   description: "A professional admin dashboard built with Next.js, featuring custom themes and advanced functionality.",
+    //   image: "/projects/nextJS/librify-dashboar.png",
+    //   category: "Next.js",
+    //   techStack: ["Next.js", "Tailwind CSS", "Postgres", "Typescript"]
+    // },
+    // {
+    //   id: 14,
+    //   title: "PropertyHive",
+    //   description: "A collaborative task management application with real-time updates and team collaboration features.",
+    //   image: "/projects/nextJS/property-hive.png",
+    //   category: "Next.js",
+    //   techStack: ["NextJS", "Tailwind CSS", "MongoDB"],
+    //   liveUrl: "https://property-hive-ten.vercel.app/"
+    // },
     {
       id: 5,
       title: "Pacific Paradise Estates",
