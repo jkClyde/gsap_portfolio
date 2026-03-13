@@ -290,10 +290,8 @@ const ProjectsSection: React.FC = () => {
       image: "/projects/wordpress/wtw.png",
       category: "WordPress",
       techStack: ["WordPress", "Elementor"],
-      liveUrl: "https://beta11.technodreamcenter.com/wtwhandyman.com",
+      liveUrl: "wtwhandyman.com",
       designedBy: "Technodream Web Designs",
-      status: 'development'
-
     },
 
     {
