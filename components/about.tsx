@@ -22,7 +22,7 @@ const About: React.FC = () => {
     const paddingValues: number[] = isMobile ? [40, 60, 80] : [80, 120, 180];
 
     // Shorter scroll distance on mobile
-    const scrollEnd = isMobile ? '+=50%' : '+=500%';
+    const scrollEnd = isMobile ? '+=200%' : '+=500%';
 
     gsap.set('.cube', { rotationX: 0, rotationY: 0 });
     gsap.killTweensOf('.cube');
