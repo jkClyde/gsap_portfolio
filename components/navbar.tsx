@@ -97,7 +97,7 @@ export default function Navbar() {
     } else {
       document.body.style.overflow = 'unset';
     }
-    
+
     return () => {
       document.body.style.overflow = 'unset';
     };
@@ -126,7 +126,7 @@ export default function Navbar() {
           delay: 1,
           duration: 1,
         }}
-        className={`fixed w-full z-50 ${isScrolled
+        className={`fixed w-full z-[57] ${isScrolled
           ? 'backdrop-blur-2xl shadow-2xl'
           : 'backdrop-blur-none'
           } transition-all duration-300 ease-out`}
@@ -167,7 +167,7 @@ export default function Navbar() {
               <div className="h-6 w-px bg-white/10 mx-2" />
 
               <div className="flex gap-3">
-             
+
                 <Link
                   href={socialLinks.linkedin}
                   target="_blank"
